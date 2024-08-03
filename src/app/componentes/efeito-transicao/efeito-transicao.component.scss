@@ -1,0 +1,13 @@
+.transicao-efeito {
+  position: fixed;
+  width: 100%;
+  background: rgb(81, 43, 212);
+  background: linear-gradient(
+    0deg,
+    rgba(81, 43, 212, 1) 0%,
+    rgba(209, 1, 171, 1) 39%,
+    rgba(209, 1, 171, 1) 100%
+  );
+  min-height: 300px;
+  max-height: 300px;
+}
