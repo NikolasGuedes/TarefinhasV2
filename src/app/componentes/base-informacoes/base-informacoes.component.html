@@ -1,7 +1,7 @@
 <section>
   <div class="menu-lateral-esq">
     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50"
-      height="50" fill="none" viewBox="0 0 24 24">
+      height="50" fill="none" viewBox="0 0 24 24" class="add">
       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
         d="M12 7.757v8.486M7.757 12h8.486M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
     </svg>
@@ -128,27 +128,38 @@
     </svg>
   </div>
 
-  <div class="secao_tarefinhas">
+  <div class="secao_tarefinhas" *ngIf="(tarefinhas$ | async) as tarefinhas;">
 
-    <div class="tarefinha">
-      <div class="cabecalho_tarefinha">
-        <p>Titulo Tarefinha</p>
-      </div>
-      <div class="descricao_tarefinha">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.</p>
-      </div>
-      <div class="detalhes_tarefinha">
-        <div class="btn-detalhes_tarefinha">
-          <p>mostrar detalhes</p>
+    <ng-container *ngIf="tarefinhas.length > 0;">
+      <div class="tarefinha" *ngFor="let tarefinha of tarefinhas$ | async">
+        <div class="cabecalho_tarefinha" [ngClass]="tarefinha.cor">
+          <p>{{tarefinha.titulo}}</p>
+        </div>
+        <div class="descricao_tarefinha">
+          <p>{{tarefinha.descricao}}</p>
+        </div>
+        <div class="detalhes_tarefinha">
+          <div class="btn-detalhes_tarefinha" [ngClass]="tarefinha.cor">
+            <p>mostrar detalhes</p>
+          </div>
         </div>
       </div>
-    </div>
+    </ng-container>
+
+    <ng-container *ngIf="tarefinhas.length <= 0;">
+      <div class="nenhuma_tarefinha">
+        <p>Nenhuma</p>
+        <p>Tarefinha</p>
+        <p>Cadastrada</p>
+      </div>
+    </ng-container>
 
   </div>
 
 </section>
+
+<dialog class="modal_formulario" id="modal">
+  <div>
+    <p>teste</p>
+  </div>
+</dialog>

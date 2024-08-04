@@ -7,51 +7,52 @@ namespace TarefinhaAPI.Rotas;
 public static class TarefinhasRotas
 {
 
-    public static List<Tarefinha> Tarefinhas = new()
+  public static List<Tarefinha> Tarefinhas = new()
     {
-        new (Guid.NewGuid(), "Nikolas"),
-        new (Guid.NewGuid(), "Nathan"),
-        new (Guid.NewGuid(), "Pedro"),
-        new (Guid.NewGuid(), "Matheus"),
-        new (Guid.NewGuid(), "Henrique"),
-        new (Guid.NewGuid(), "Willian"),
+        new (Guid.NewGuid(), "Titulo 01", "Descricao 01", "tema_01"),
+        new (Guid.NewGuid(), "Titulo 02", "Descricao 02", "tema_02"),
+        new (Guid.NewGuid(), "Titulo 03", "Descricao 03", "tema_03"),
+        new (Guid.NewGuid(), "Titulo 04", "Descricao 04", "tema_04"),
+        new (Guid.NewGuid(), "Titulo 05", "Descricao 05", "tema_05"),
+
     };
 
-    public static void MapTarefinhasRotas(this WebApplication app)
+  public static void MapTarefinhasRotas(this WebApplication app)
     {
-        app.MapGet("/pessoas", () =>
+        app.MapGet("/tarefinhas", () =>
         {
             return Tarefinhas;
         });
 
-        app.MapGet("/pessoas/{nome}", (string nome) => Tarefinhas.Find(x => x.Nome.StartsWith(nome)));
-
-        app.MapPost("/pessoas", (Tarefinha novaPessoa) =>
+        app.MapPost("/tarefinhas", (Tarefinha novaTarefinha) =>
         {
-            novaPessoa.Id = Guid.NewGuid();
-            Tarefinhas.Add(novaPessoa);
-            return novaPessoa;
+            novaTarefinha.Id = Guid.NewGuid();
+            Tarefinhas.Add(novaTarefinha);
+            return novaTarefinha;
         });
 
-        app.MapPut("/pessoas/{id}", (Guid id, Tarefinha pessoa) =>
+        app.MapPut("/tarefinhas/{id}", (Guid id, Tarefinha tarefinha) =>
         {
             var encontrado = Tarefinhas.Find(x => x.Id == id);
 
             if (encontrado == null) { return Results.NotFound(); };
 
-            encontrado!.Nome = pessoa.Nome;
+            encontrado!.Titulo = tarefinha.Titulo;
+            encontrado!.Descricao = tarefinha.Descricao;
+            encontrado!.Cor = tarefinha.Cor;
 
-            return Results.Ok(encontrado);
+
+          return Results.Ok(encontrado);
         });
 
-        app.MapDelete("/pessoas/{nome}", (String nome) =>
+        app.MapDelete("/tarefinhas/{id}", (Guid id) =>
         {
-            var pessoaParaDeletar = Tarefinhas.Find(x => x.Nome == nome);
+            var tarefinhaParaDeletar = Tarefinhas.Find(x => x.Id == id);
 
-            if (pessoaParaDeletar == null)
+            if (tarefinhaParaDeletar == null)
                 return;
 
-            Tarefinhas.Remove(pessoaParaDeletar);
+            Tarefinhas.Remove(tarefinhaParaDeletar);
         });
 
 

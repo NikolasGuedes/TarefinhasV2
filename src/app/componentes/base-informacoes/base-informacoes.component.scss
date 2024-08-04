@@ -31,7 +31,18 @@ section {
   }
 
   path {
-    color: #ffffff;
+    color: #949494;
+  }
+
+  .add:hover{
+    cursor: pointer;
+    path {
+      color: #ffffff;
+    }
+  }
+
+  circle{
+    cursor: pointer;
   }
 }
 
@@ -64,6 +75,10 @@ section {
   path {
     color: #ffffff;
   }
+
+  circle{
+    cursor: pointer;
+  }
 }
 
 .tema_selecionado {
@@ -74,6 +89,7 @@ section {
 }
 
 .secao_tarefinhas {
+  z-index: 1;
   width: 100%;
   padding: 0 6em;
   display: flex;
@@ -101,13 +117,70 @@ section {
   -webkit-box-shadow: 19px 14px 62px -8px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 19px 14px 62px -8px rgba(0, 0, 0, 0.5);
   box-shadow: 19px 14px 62px -8px rgba(0, 0, 0, 0.5);
+
+  transition: 0.2s;
 }
+
+.tarefinha:hover{
+  -webkit-box-shadow: 19px 14px 62px -8px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 19px 14px 62px -8px rgba(255, 255, 255, 0.5);
+  box-shadow: 19px 14px 62px -8px rgba(255, 255, 255, 0.5);
+
+  transform: translateY(-5px);
+}
+
+.nenhuma_tarefinha{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+  margin-top: 2em;
+  z-index: 1;
+  min-height: 30em;
+
+  transition: 0.1s;
+  animation: texto_nenhuma_tarefinha 2s ease-in-out infinite;
+
+  p{
+    font-family: "Inter";
+    font-weight: 900;
+    font-size: 5em;
+
+    letter-spacing: 0.1em;
+    background: linear-gradient(
+      180deg,
+      #D101AB 0%,
+      #D101AB 55%,
+      rgba(60, 86, 223, 0) 77%,
+      rgba(0, 212, 255, 0) 100%
+    );
+    color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes texto_nenhuma_tarefinha {
+
+  0% {
+      transform: translateY(0rem)
+  }
+
+  50% {
+      transform: translateY(-1rem)
+  }
+
+  100% {
+      transform: translateY(0rem)
+  }
+}
+
 
 .cabecalho_tarefinha {
   width: 100%;
   min-height: 2.5em;
   max-height: 2.5em;
-  background: #ef476f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,10 +236,37 @@ section {
   padding: 0.4em 1.5em;
   border-radius: 1em;
 
-  background-color: #ef476f;
 
   p {
     font-family: "Josefin Sans";
     color: #ffffff;
   }
+
+  transition: 0.2s;
+
+  cursor: pointer;
+}
+
+.btn-detalhes_tarefinha:hover{
+  padding: 0.5em 2em;
+}
+
+.tema_01{
+  background-color: #00FF57;
+}
+
+.tema_02{
+  background-color: #3185FC;
+}
+
+.tema_03{
+  background-color: #FFB200;
+}
+
+.tema_04{
+  background-color: #EF476F;
+}
+
+.tema_05{
+  background-color: #642CA9;
 }

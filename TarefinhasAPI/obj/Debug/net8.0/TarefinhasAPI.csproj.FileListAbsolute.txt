@@ -64,3 +64,4 @@ D:\Trabalhos Sites-Apis\TarefinhasV2\TarefinhasV2\TarefinhasAPI\obj\Debug\net8.0
 D:\Trabalhos Sites-Apis\TarefinhasV2\TarefinhasV2\TarefinhasAPI\obj\Debug\net8.0\TarefinhasAPI.pdb
 D:\Trabalhos Sites-Apis\TarefinhasV2\TarefinhasV2\TarefinhasAPI\obj\Debug\net8.0\TarefinhasAPI.genruntimeconfig.cache
 D:\Trabalhos Sites-Apis\TarefinhasV2\TarefinhasV2\TarefinhasAPI\obj\Debug\net8.0\ref\TarefinhasAPI.dll
+D:\Trabalhos Sites-Apis\TarefinhasV2\TarefinhasV2\TarefinhasAPI\obj\Debug\net8.0\TarefinhasAPI.sourcelink.json
