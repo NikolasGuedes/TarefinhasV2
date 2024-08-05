@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Builder;
+using TarefinhaAPI.Filtros;
 using TarefinhaAPI.Models;
 
 namespace TarefinhaAPI.Rotas;
@@ -9,13 +10,13 @@ public static class TarefinhasRotas
 
   public static List<Tarefinha> Tarefinhas = new()
     {
-        new (Guid.NewGuid(), "Titulo 01", "Descricao 01", "tema_01"),
-        new (Guid.NewGuid(), "Titulo 02", "Descricao 02", "tema_02"),
-        new (Guid.NewGuid(), "Titulo 03", "Descricao 03", "tema_03"),
-        new (Guid.NewGuid(), "Titulo 04", "Descricao 04", "tema_04"),
-        new (Guid.NewGuid(), "Titulo 05", "Descricao 05", "tema_05"),
+    new (Guid.NewGuid(), "Titulo 01", "Descricao 01", "cor_01"),
+    new (Guid.NewGuid(), "Titulo 02", "Descricao 02", "cor_02"),
+    new (Guid.NewGuid(), "Titulo 03", "Descricao 03", "cor_03"),
+    new (Guid.NewGuid(), "Titulo 04", "Descricao 04", "cor_04"),
+    new (Guid.NewGuid(), "Titulo 05", "Descricao 05", "cor_05"),
 
-    };
+  };
 
   public static void MapTarefinhasRotas(this WebApplication app)
     {

@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Trabalhos Sites-Apis\\TarefinhasV2\\TarefinhasV2\\TarefinhasAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1864A747-5AA9-4039-A693-D2C95C5838C3}|TarefinhasAPI.csproj|d:\\trabalhos sites-apis\\tarefinhasv2\\tarefinhasv2\\tarefinhasapi\\rotas\\tarefinharotas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1864A747-5AA9-4039-A693-D2C95C5838C3}|TarefinhasAPI.csproj|solutionrelative:rotas\\tarefinharotas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1864A747-5AA9-4039-A693-D2C95C5838C3}|TarefinhasAPI.csproj|d:\\trabalhos sites-apis\\tarefinhasv2\\tarefinhasv2\\tarefinhasapi\\filtros\\linqfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1864A747-5AA9-4039-A693-D2C95C5838C3}|TarefinhasAPI.csproj|solutionrelative:filtros\\linqfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LinqFilter.cs",
+              "DocumentMoniker": "D:\\Trabalhos Sites-Apis\\TarefinhasV2\\TarefinhasV2\\TarefinhasAPI\\Filtros\\LinqFilter.cs",
+              "RelativeDocumentMoniker": "Filtros\\LinqFilter.cs",
+              "ToolTip": "D:\\Trabalhos Sites-Apis\\TarefinhasV2\\TarefinhasV2\\TarefinhasAPI\\Filtros\\LinqFilter.cs",
+              "RelativeToolTip": "Filtros\\LinqFilter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T11:08:13.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TarefinhaRotas.cs",
+              "DocumentMoniker": "D:\\Trabalhos Sites-Apis\\TarefinhasV2\\TarefinhasV2\\TarefinhasAPI\\Rotas\\TarefinhaRotas.cs",
+              "RelativeDocumentMoniker": "Rotas\\TarefinhaRotas.cs",
+              "ToolTip": "D:\\Trabalhos Sites-Apis\\TarefinhasV2\\TarefinhasV2\\TarefinhasAPI\\Rotas\\TarefinhaRotas.cs",
+              "RelativeToolTip": "Rotas\\TarefinhaRotas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T10:26:42.315Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

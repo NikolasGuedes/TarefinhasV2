@@ -1,7 +1,7 @@
 <section>
   <div class="menu-lateral-esq">
     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50"
-      height="50" fill="none" viewBox="0 0 24 24" class="add">
+      height="50" fill="none" viewBox="0 0 24 24" class="add" (click)="ChamarFormulario()">
       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
         d="M12 7.757v8.486M7.757 12h8.486M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
     </svg>
@@ -139,14 +139,14 @@
           <p>{{tarefinha.descricao}}</p>
         </div>
         <div class="detalhes_tarefinha">
-          <div class="btn-detalhes_tarefinha" [ngClass]="tarefinha.cor">
+          <div class="btn-detalhes_tarefinha" [ngClass]="tarefinha.cor" (click)="HablitarEdicaoTarefinha(tarefinha)">
             <p>mostrar detalhes</p>
           </div>
         </div>
       </div>
     </ng-container>
 
-    <ng-container *ngIf="tarefinhas.length <= 0;">
+    <ng-container *ngIf="tarefinhas.length <= 0">
       <div class="nenhuma_tarefinha">
         <p>Nenhuma</p>
         <p>Tarefinha</p>
@@ -158,8 +158,58 @@
 
 </section>
 
-<dialog class="modal_formulario" id="modal">
-  <div>
-    <p>teste</p>
+<dialog class="modal_formulario hide" id="modal" #modalFormulario>
+  <div class="cabecalho_formulario" [ngClass]="ValorCorTarefinha">
+    <p>{{ValorCampoCabecalhoFormulario}}</p>
+    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50"
+      height="50" fill="none" viewBox="0 0 24 24" (click)="FecharFormulario()">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+  </div>
+  <div class="Secao_titulo_formulario">
+    <div>
+      <h1>Titulo:</h1>
+      <input type="text" placeholder="Ex: tarefas da semana..." [(ngModel)]="valorCampoTitulo">
+    </div>
+    <div class="opcoes_cores">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24"
+        (click)="Escolher_Cor01()">
+        <circle r="8" cx="12" cy="10" fill="#00FF57" #cor01Formulario />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24"
+        (click)="Escolher_Cor02()">
+        <circle r="8" cx="12" cy="10" fill="#3185FC" #cor02Formulario />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24"
+        (click)="Escolher_Cor03()">
+        <circle r="8" cx="12" cy="10" fill="#FFB200" #cor03Formulario />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24"
+        (click)="Escolher_Cor04()">
+        <circle r="8" cx="12" cy="10" fill="#EF476F" #cor04Formulario />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24"
+        (click)="Escolher_Cor05()">
+        <circle r="8" cx="12" cy="10" fill="#642CA9" #cor05Formulario />
+      </svg>
+    </div>
+  </div>
+  <div class="secao_descricao_formulario">
+    <h1>descrição:</h1>
+    <textarea textarea style="resize: none;" name="" id="" placeholder="Lorem Ipsum is simply dummy text...."
+      [(ngModel)]="ValorCampoDescricao"></textarea>
+
+  </div>
+  <div class="secao_botoes_formulario">
+    <div class="btn_excluir_tarefa" #btnExcluirTarefa (click)="DeletarTArefinha()">
+      <p>Excluir Tarefinha</p>
+    </div>
+    <div class="btn_criar_tarefa" #btnCriarTarefa (click)="CriarTarefinha()" [ngClass]="ValorCorTarefinha">
+      <p>Criar Tarefinha</p>
+    </div>
+    <div class="btn_criar_tarefa" #btnEditarTarefa (click)="SalvarEdicaoTarefinha()" [ngClass]="ValorCorTarefinha">
+      <p>Salvar Alteração</p>
+    </div>
   </div>
 </dialog>
