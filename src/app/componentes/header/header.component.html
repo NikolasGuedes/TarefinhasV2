@@ -2,11 +2,11 @@
   <h3>Tarefinhas</h3>
   <div class="date">
     <div class="relogio">
-      <p #horarioRelogio>12:00</p>
+      <p>{{horas}}:{{minutos}}</p>
     </div>
     <div class="dia-data">
-      <p>Segunda-Feira</p>
-      <p>05/08/2024</p>
+      <p>{{dia}}</p>
+      <p>{{data | date : 'dd/MM/yyyy'}}</p>
     </div>
   </div>
   <div class="idioma">

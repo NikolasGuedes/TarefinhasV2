@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TarefinhasAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+077759f230eb56f1ef0079520a7a9c5c999ea307")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10e82043c80a9c554904f1bd36d39c836058a519")]
 [assembly: System.Reflection.AssemblyProductAttribute("TarefinhasAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TarefinhasAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

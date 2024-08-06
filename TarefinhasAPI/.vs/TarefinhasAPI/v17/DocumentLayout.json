@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LinqFilter.cs",
-              "DocumentMoniker": "D:\\Trabalhos Sites-Apis\\TarefinhasV2\\TarefinhasV2\\TarefinhasAPI\\Filtros\\LinqFilter.cs",
-              "RelativeDocumentMoniker": "Filtros\\LinqFilter.cs",
-              "ToolTip": "D:\\Trabalhos Sites-Apis\\TarefinhasV2\\TarefinhasV2\\TarefinhasAPI\\Filtros\\LinqFilter.cs",
-              "RelativeToolTip": "Filtros\\LinqFilter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T11:08:13.847Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -45,6 +32,18 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-05T10:26:42.315Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LinqFilter.cs",
+              "DocumentMoniker": "D:\\Trabalhos Sites-Apis\\TarefinhasV2\\TarefinhasV2\\TarefinhasAPI\\Filtros\\LinqFilter.cs",
+              "RelativeDocumentMoniker": "Filtros\\LinqFilter.cs",
+              "ToolTip": "D:\\Trabalhos Sites-Apis\\TarefinhasV2\\TarefinhasV2\\TarefinhasAPI\\Filtros\\LinqFilter.cs",
+              "RelativeToolTip": "Filtros\\LinqFilter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T11:08:13.847Z"
             }
           ]
         }

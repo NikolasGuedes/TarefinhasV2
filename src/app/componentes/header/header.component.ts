@@ -8,42 +8,65 @@ import { Observable } from 'rxjs';
 })
 export class HeaderComponent {
 
-  public hora: string = ""
-  @ViewChild('horarioRelogio') horarioRelogio?: ElementRef<HTMLElement>;
+  public horas: string = ""
+  public minutos: string = ""
+  public dia: string = ""
+  public data: Date = new Date()
 
   ngOnInit(): void {
-    this.horarioRelogio?.nativeElement.addEventListener('DOMContentLoaded', ()=>{
-      this.PegaHora()
-    })
+
+    this.PegaHorario()
+    this.PegaDia()
+    this.ConversaoDiasDaSemana(this.dia)
+
+    setInterval(() => {
+      this.PegaHorario()
+    }, 2000)
 
   }
 
-  // formatDateToPtBr(date: Date): string {
-  //   return date.toLocaleDateString('pt-BR', {
-  //     day: '2-digit',
-  //     month: '2-digit',
-  //     year: 'numeric'
-  //   });
-  // }
+  PegaHorario() {
 
-  // updateDate() {
-  //   const now = new Date();
-  //   const formattedDate = this.formatDateToPtBr(now);
-  //   const dateElement = document.querySelector('horarioRelogio');
 
-  //   if (dateElement) {
-  //     dateElement.innerText = formattedDate;
-  //   }
-  // }
+    const date = new Date()
+    this.horas = date.getHours().toString();
+    this.minutos = date.getMinutes().toString();
 
-  PegaHora() {
+    if(this.minutos.length == 1)
+      this.minutos = `0${this.minutos}`
 
-    var dateString = new Date().toLocaleString("pt-br", { timeZone: "America/Sao_Paulo" });
-    var formattedString = dateString.replace(", ", " - ");
-    setInterval(this.PegaHora, 1000);
-    console.log(this.hora)
 
-    this.hora = formattedString.toString();
+  }
+
+  PegaDia(){
+    const date = new Date()
+    this.dia = date.getDay().toString();
+
+  }
+
+  ConversaoDiasDaSemana(valorDia: string){
+
+    if(valorDia == "1"){
+      this.dia = "Segunda-Feira"
+    }
+    if(valorDia == "2"){
+      this.dia = "Terça-Feira"
+    }
+    if(valorDia == "3"){
+      this.dia = "Quarta-Feira"
+    }
+    if(valorDia == "4"){
+      this.dia = "Quinta-Feira"
+    }
+    if(valorDia == "5"){
+      this.dia = "Sexta-Feira"
+    }
+    if(valorDia == "6"){
+      this.dia = "Sabado"
+    }
+    if(valorDia == "7"){
+      this.dia = "Domingo"
+    }
 
   }
 
